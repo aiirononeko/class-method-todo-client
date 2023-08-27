@@ -8,8 +8,7 @@ import {
 	Th,
 	Td,
 	TableContainer,
-	Spinner,
-	Checkbox
+	Spinner
 } from '@chakra-ui/react';
 import { EditIcon, DeleteIcon } from '@chakra-ui/icons';
 
@@ -181,14 +180,20 @@ export function App() {
 											</>
 										)}
 										<Td>
-											<Checkbox
-												size="lg"
-												colorScheme="blue"
-												isChecked={task.status === 'DONE'}
+											<input
+												type="checkbox"
+												checked={task.status === 'DONE'}
 												onChange={() => {
 													updateTaskStatus(task);
 												}}
 											/>
+											<label
+												style={{
+													marginLeft: '10px'
+												}}
+											>
+												{task.status === 'TODO' ? '未完了' : '完了'}
+											</label>
 										</Td>
 										<Td>{task.title}</Td>
 										<Td>{task.content}</Td>

@@ -39,7 +39,7 @@ export function UpdateTaskModal(props: Props) {
 	const [content, setContent] = useState('');
 	const [expiration, setExpiration] = useState('');
 	const [status, setStatus] = useState('');
-	const [isError, setIsError] = useState(false);
+	const [isError] = useState(false);
 
 	useEffect(() => {
 		const { title, content, expiration, status } = task;

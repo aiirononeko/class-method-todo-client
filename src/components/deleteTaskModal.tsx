@@ -1,4 +1,4 @@
-import { Button, Input, Text } from '@chakra-ui/react';
+import { Button, Text } from '@chakra-ui/react';
 import {
 	Modal,
 	ModalOverlay,

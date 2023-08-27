@@ -29,7 +29,7 @@ export function CreateTaskModal(props: Props) {
 	const [title, setTitle] = useState('');
 	const [content, setContent] = useState('');
 	const [expiration, setExpiration] = useState('');
-	const [isError, setIsError] = useState(false);
+	const [isError] = useState(false);
 
 	const handleTitleChange = (e: any) => setTitle(e.target.value);
 	const handleContentChange = (e: any) => setContent(e.target.value);
